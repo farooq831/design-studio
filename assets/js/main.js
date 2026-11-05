@@ -283,23 +283,13 @@
   /* Reusable reveals */
 
   $$('[data-split]').forEach(function (el) {
-    gsap.from(splitWords(el), {
+    var words = splitWords(el);
+    gsap.from(words, {
       yPercent: 115,
       duration: 1.2,
-      stagger: .06,
+      stagger: Math.min(.06, .7 / words.length),
       ease: 'expo.out',
       scrollTrigger: { trigger: el, start: 'top 85%' }
-    });
-  });
-
-  $$('[data-fill]').forEach(function (el) {
-    var words = splitWords(el);
-    gsap.set(words, { opacity: .14 });
-    gsap.to(words, {
-      opacity: 1,
-      stagger: .1,
-      ease: 'none',
-      scrollTrigger: { trigger: el, start: 'top 75%', end: 'bottom 45%', scrub: true }
     });
   });
 
@@ -438,17 +428,11 @@
     var cx = gsap.quickTo(cursor, 'x', { duration: .35, ease: 'power3' });
     var cy = gsap.quickTo(cursor, 'y', { duration: .35, ease: 'power3' });
 
-    window.addEventListener('mousemove', function (e) {
-      cursor.classList.add('is-on');
-      cx(e.clientX);
-      cy(e.clientY);
-    });
+    window.addEventListener('mousemove', function (e) { cx(e.clientX); cy(e.clientY); });
 
     document.addEventListener('mouseover', function (e) {
       var tagged = e.target.closest('[data-cursor]');
-      var link = e.target.closest('a, button, label, input, textarea');
       cursor.classList.toggle('is-label', Boolean(tagged));
-      cursor.classList.toggle('is-link', Boolean(link) && !tagged);
       label.textContent = tagged ? tagged.dataset.cursor : '';
     });
 

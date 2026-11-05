@@ -102,20 +102,17 @@ h2 em { color: var(--brass); }
   display: none;
   place-items: center;
   opacity: 0;
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
+  width: 96px;
+  height: 96px;
+  margin: -48px 0 0 -48px;
   border-radius: 50%;
-  background: var(--bone);
-  mix-blend-mode: difference;
+  background: var(--brass);
   pointer-events: none;
-  transition: width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease), background .35s;
+  transform-origin: center;
+  transition: opacity .25s;
 }
-.cursor.is-on { opacity: 1; }
-.cursor__label { font-size: 13px; font-weight: 600; color: var(--ink); opacity: 0; transition: opacity .2s; white-space: nowrap; }
-.cursor.is-link { width: 44px; height: 44px; margin: -22px 0 0 -22px; }
-.cursor.is-label { width: 96px; height: 96px; margin: -48px 0 0 -48px; background: var(--brass); mix-blend-mode: normal; }
-.cursor.is-label .cursor__label { opacity: 1; }
+.cursor__label { font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+.cursor.is-label { opacity: 1; }
 @media (hover: hover) and (pointer: fine) { .cursor { display: grid; } }
 
 /* Nav */
