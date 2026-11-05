@@ -11,7 +11,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-0b0f14?style=flat-square&logo=javascript&logoColor=e2b04a)
 ![GSAP](https://img.shields.io/badge/GSAP-0b0f14?style=flat-square&logo=greensock&logoColor=e2b04a)
 
-![Portfolio hero with a large AWAIS wordmark over a portrait](docs/hero.jpg)
+![Portfolio hero with a large AWAIS headline beside a cut-out sticker of Awais](docs/hero.jpg)
 
 </div>
 
@@ -25,11 +25,12 @@
 
 ## Features
 
-- **Animated intro:** a counting preloader leads into a portrait and wordmark reveal.
+- **Comic-inspired design:** cut-out stickers, bold italic type, hand-script accents, halftone dots and hard-shadow panels.
+- **Animated intro:** a counting preloader leads into a sticker and headline reveal.
 - **Horizontal gallery:** projects scroll sideways on desktop and stack on phones.
 - **Project popups:** each one has details, next and previous controls, and a link to the original post.
 - **WhatsApp contact form:** validates the fields, then opens WhatsApp with the message ready to send.
-- **Scroll animation:** smooth scrolling, word-by-word text reveals, parallax images and a banner that reacts to scroll speed.
+- **Scroll animation:** smooth scrolling, word-by-word headline reveals, panels that pop in and a banner that reacts to scroll speed.
 - **Responsive:** tested at phone, laptop and large desktop sizes.
 - **Accessible:** keyboard-friendly popups, image descriptions, and full support for reduced-motion settings.
 - **No build step:** plain files that GitHub Pages can serve directly.
